@@ -22,9 +22,9 @@ Route::get('/homepage',function(){
     return view('homepage');
 })->middleware('verified')->middleware('auth');
 
-
 Auth::routes();
 Auth::routes(['verify' => true]);
+
 
 Route::get('/logout',function(){ auth()->logout();return redirect('/');});
 
@@ -32,7 +32,7 @@ Route::get('/logout',function(){ auth()->logout();return redirect('/');});
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::middleware('auth')->prefix('user')->group(function(){
+Route::middleware('verified')->middleware('auth')->prefix('user')->group(function(){
 
     Route::get('profile',function(){
         return view('user.profile');
@@ -52,7 +52,7 @@ Route::middleware('auth')->prefix('user')->group(function(){
 
 });
 
-Route::middleware('administrator')->prefix('admin')->group(function(){
+Route::middleware('verified')->middleware('administrator')->prefix('admin')->group(function(){
 
     Route::get('userpage',function(){
         return view('admin.userpage');
