@@ -19,6 +19,6 @@ Please follow the instruction step by step -<br>
 (11) open command box and go to the project path and run command composer require laravel/passport "~9.0", after that run command php artisan migrate <br>
 (12) open command box and go to the project path and run command php artisan key:generate, after that run command php artisan cache:clear <br>
 <13> open command box and go to the project path and run command php artisan serve, copy the address that project currently running and paste it to the broswer and then open new command box and go to the project path run command npm run watch.<br>
-<14> go to the config/kuaidi.php and you and add administrator to the website<br>
+<14> go to the config/kuaidi.php and you can add administrator to the website<br>
 <h3> We are ready to go </h3>
 
