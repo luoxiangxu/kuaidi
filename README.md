@@ -7,7 +7,7 @@ Please follow the instruction step by step -<br>
 (3) please install nodejs <br>
 (4) please download project zip file <br>
 (5) extract zip file to path c/xampp/htdocs <br>
-(6) open command box and go to the project path and run composer install, after that run npm install. <br>
+(6) open command box and go to the project path and run <mark>composer install</mark>, after that run npm install. <br>
 (7) open command box and go to the project path run command cp .env.example .env <br>
 (8) open xampp control panel and run apache service and mysql<br>
 (9) open your broswer and type localhost/phpmyadmin and create one database (in this case my database name is kuaidi)<br>
@@ -18,7 +18,7 @@ Please follow the instruction step by step -<br>
         at the line no 32 : MAIL_FROM_ADDRESS=luoxiangxu66@gmail.com<br>
 (11) open command box and go to the project path and run command composer require laravel/passport "~9.0", after that run command php artisan migrate <br>
 (12) open command box and go to the project path and run command php artisan key:generate, after that run command php artisan cache:clear <br>
-<13> open command box and go to the project path and run command php artisan serve, copy the address that project currently running and paste it to the broswer and then open new command box and go to the project path run command npm run watch.<br>
-<14> go to the config/kuaidi.php and you can add administrator to the website<br>
+(13) open command box and go to the project path and run command php artisan serve, copy the address that project currently running and paste it to the broswer and then open new command box and go to the project path run command npm run watch.<br>
+(14) go to the config/kuaidi.php and you can add administrator to the website<br>
 <h3> We are ready to go </h3>
 
