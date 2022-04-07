@@ -38,25 +38,31 @@
 
         <div class="topbar-right">
           <ul class="topbar-nav nav">
-            @if(auth()->check() && auth()->user()->email_verified_at!=null)
-                @if(auth()->user()->isAdmin())
-                  <li class="nav-item"><a class="nav-link" href="/user/profile">{{Auth::user()->name}} (ID : {{Auth::user()->id}})</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/admin/userpage">User Page</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/admin/orderrecord">Order Record</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/admin/order">Order</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/admin/arrivedorder">Arrived Order</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/admin/topup">Topup</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+          @if(auth()->check())
+                @if(auth()->user()->email_verified_at!=null)
+                    @if(auth()->user()->isAdmin())
+                    <li class="nav-item"><a class="nav-link" href="/user/profile">{{Auth::user()->name}} (ID : {{Auth::user()->id}})</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/userpage">User Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/orderrecord">Order Record</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/order">Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/arrivedorder">Arrived Order</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/admin/topup">Topup</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+                    @else
+                    <li class="nav-item"><a class="nav-link" href="/user/profile"><i class="fa fa-user mr-1" style="font-size:16px; color:red;"></i>{{Auth::user()->name}} (ID : {{Auth::user()->id}})</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/shopping"><i class="fa fa-cart-plus mr-1" style="font-size:16px; color:red;"></i>Shopping</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/order"><i class="fa fa-list-alt mr-1" style="font-size:16px; color:red;"></i>Order List</a></li>
+                    <li class="nav-item"><a class="nav-link" href="javascript:;" data-toggle="modal" data-target="#creditModal"><i class="fa fa-credit-card mr-1" style="font-size:16px; color:red;"></i>My Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/user/topuprecord"><i class="fa fa-credit-card mr-1" style="font-size:16px; color:red;"></i>Topup Record</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-sign-out mr-1" style="font-size:16px; color:red;"></i>Logout</a></li>
+                    @endif
                 @else
-                  <li class="nav-item"><a class="nav-link" href="/user/profile"><i class="fa fa-user mr-1" style="font-size:16px; color:red;"></i>{{Auth::user()->name}} (ID : {{Auth::user()->id}})</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/user/shopping"><i class="fa fa-cart-plus mr-1" style="font-size:16px; color:red;"></i>Shopping</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/user/order"><i class="fa fa-list-alt mr-1" style="font-size:16px; color:red;"></i>Order List</a></li>
-                  <li class="nav-item"><a class="nav-link" href="javascript:;" data-toggle="modal" data-target="#creditModal"><i class="fa fa-credit-card mr-1" style="font-size:16px; color:red;"></i>My Wallet</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/user/topuprecord"><i class="fa fa-credit-card mr-1" style="font-size:16px; color:red;"></i>Topup Record</a></li>
-                  <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-sign-out mr-1" style="font-size:16px; color:red;"></i>Logout</a></li>
+                <li><i style="font-size:16px; color:red; margin-right:50px;">Please verify your email inorder to get more accesses </i></li>
+                <li class="nav-item"><a class="nav-link" href="/user/profile"><i class="fa fa-user mr-1" style="font-size:16px; color:red;"></i>{{Auth::user()->name}} (ID : {{Auth::user()->id}})</a></li>
+                <li class="nav-item"><a class="nav-link" href="/logout"><i class="fa fa-sign-out mr-1" style="font-size:16px; color:red;"></i>Logout</a></li>
                 @endif
             @else
-              <li class="nav-item"><a class="nav-link" href="javascript:;" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in mr-1" style="font-size:16px; color:red;"></i>Login</a></li>
+                <li class="nav-item"><a class="nav-link" href="javascript:;" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in mr-1" style="font-size:16px; color:red;"></i>Login</a></li>
             @endif
           </ul>
         </div>
