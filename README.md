@@ -3,8 +3,8 @@ This is my demo laravel project, I can't host this project on web because the pl
 
 Please follow the instruction step by step -<br>
 (1) please install **xampp** on your machine, and make sure **php version is > 7.3 and < 8.0** <br>
-(2) please install **composer** <br>
-(3) please install **nodejs** <br>
+(2) please install **composer** and install 2.1.8 version (composer self-update 2.1.8)<br>
+(3) please install **nodejs** and 7.0.0 version (npm install -g @npm7.0.0)<br>
 (4) please download project zip file <br>
 (5) extract zip file to path **c/xampp/htdocs** <br>
 (6) open **command box** and go to the **project path** and _run command_ **composer install**, after that _run_ **npm install**. <br>
