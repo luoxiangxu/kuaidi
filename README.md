@@ -12,12 +12,10 @@ Please follow the instruction step by step -<br>
 (9) open your **web broswer** and _type_ **localhost/phpmyadmin** and create one database and name it **kuaidi** (in this case my database name is kuaidi)<br>
 (10) go to the **.env file** and insert the representative parameters -- <br>
         at the line no **12** : DB_DATABASE=**kuaidi**<br>
-        at the line no **27** : MAIL_USERNAME=**smtp.googlemail.com** <br>
-        at the line no **28** : MAIL_HOST=**your gmail address** <br>
-        at the line no **29** : MAIL_PORT=**456** <br>
-        at the line no **30** : MAIL_PASSWORD=**your gmail password**<br>
-        at the line no **31** : MAIL_ENCRYPTION=**ssl**<br>
-        at the line no **32** : MAIL_FROM_ADDRESS=**your gmail address**<br>
+        at the line no **27** : MAIL_HOST=**sandbox.smtp.mailtrap.io** <br>
+        at the line no **29** : MAIL_PORT=**2525** <br>
+        at the line no **27** : MAIL_USERNAME=**your mailtrap user name** <br>
+        at the line no **30** : MAIL_PASSWORD=**your mailtrap password**<br>
 (11) open your google account and go to manage your google account and enable less secure app access. <br>
 (12) open **command box** and go to the **project path** and _run command_ **composer require laravel/passport "~9.0"**, after that _run command_ **php artisan migrate** and then _run_command_ **php artisan passport:install**<br>
 (13) open **command box** and go to the **project path** and _run command_ **php artisan key:generate**, after that _run command_ **php artisan cache:clear** <br>
