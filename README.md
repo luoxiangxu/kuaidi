@@ -1,5 +1,4 @@
 # Welcome!<br>
-This is my demo laravel project, I can't host this project on web because the platforms do not provide the ssh function on free web hosting version (inorder to install composer, nodejs and other dependencies.) 
 
 Please follow the instruction step by step -<br>
 (1) please install **xampp** on your machine, and make sure **php version is > 7.3 and < 8.0** <br>
