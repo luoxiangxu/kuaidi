@@ -13,8 +13,8 @@ Please follow the instruction step by step -<br>
 (10) go to the **.env file** and insert the representative parameters -- <br>
         at the line no **12** : DB_DATABASE=**kuaidi**<br>
         at the line no **27** : MAIL_HOST=**sandbox.smtp.mailtrap.io** <br>
-        at the line no **29** : MAIL_PORT=**2525** <br>
-        at the line no **27** : MAIL_USERNAME=**your mailtrap user name** <br>
+        at the line no **28** : MAIL_PORT=**2525** <br>
+        at the line no **29** : MAIL_USERNAME=**your mailtrap user name** <br>
         at the line no **30** : MAIL_PASSWORD=**your mailtrap password**<br>
 (11) open your google account and go to manage your google account and enable less secure app access. <br>
 (12) open **command box** and go to the **project path** and _run command_ **composer require laravel/passport "~9.0"**, after that _run command_ **php artisan migrate** and then _run_command_ **php artisan passport:install**<br>
