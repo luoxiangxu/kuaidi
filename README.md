@@ -19,7 +19,7 @@ Please follow the instruction step by step -<br>
         at the line no **31** : MAIL_ENCRYPTION=**ssl**<br>
         at the line no **32** : MAIL_FROM_ADDRESS=**your gmail address**<br>
 (11) open your google account and go to manage your google account and enable less secure app access. <br>
-(12) open **command box** and go to the **project path** and _run command_ **composer require laravel/passport "~9.0"**, after that _run command_ **php artisan migrate** <br>
+(12) open **command box** and go to the **project path** and _run command_ **composer require laravel/passport "~9.0"**, after that _run command_ **php artisan migrate** and then _run_command_ **php artisan passport:install**<br>
 (13) open **command box** and go to the **project path** and _run command_ **php artisan key:generate**, after that _run command_ **php artisan cache:clear** <br>
 (14) open **command box** and go to the **project path** and _run command_ **php artisan serve**, _copy the address_ that project currently running and _paste_ it to the **web broswer** and then open **new command box** and go to the **project path** _run command_ **npm run watch**.<br>
 (15) go to the **config/kuaidi.php** and you can add **administrator** to the website<br>
